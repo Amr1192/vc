@@ -1,0 +1,31 @@
+ What is SSH in GitHub?
+SSH in GitHub allows developers to connect their local computer to their GitHub account using SSH keys. These keys act like a secure digital identity that verifies the user when interacting with GitHub repositories.
+
+ How SSH Works
+SSH authentication is based on a pair of cryptographic keys:
+
+Public Key: Uploaded to the GitHub account.
+
+Private Key: Stored securely on the user’s computer.
+
+When a user tries to access GitHub via SSH, GitHub checks the public key and verifies it with the private key stored on the user’s device.
+
+Advantages of Using SSH with GitHub
+
+Secure authentication using encryption
+
+No need to enter credentials repeatedly
+
+Safe access for automation and scripts
+
+Reliable for frequent Git operations
+
+ Basic Steps to Use SSH with GitHub
+
+Generate an SSH key on the computer.
+
+Add the public SSH key to the GitHub account settings.
+
+Test the SSH connection.
+
+Clone or interact with repositories using the SSH URL.
