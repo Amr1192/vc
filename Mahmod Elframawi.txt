@@ -1,0 +1,21 @@
+In the context of GitHub, SSH (Secure Shell) is a cryptographic network protocol used to securely connect your local computer to GitHub's servers.
+
+It acts as a secure authentication method, allowing you to push code to or pull code from your repositories without having to type your username and password (or a Personal Access Token) every single time.
+
+Here is a breakdown of how it works and why it is useful:
+How SSH Works: The Key Pair
+
+SSH relies on something called public-key cryptography. When you set up SSH for GitHub, you generate a pair of matching keys on your computer:
+
+    The Private Key: This file stays securely on your local computer. It is your secret identity, and you should never share it with anyone. Think of it as the physical key you keep on your keychain.
+
+    The Public Key: This is the safe half of the pair. You copy the contents of this file and upload it to your GitHub account settings. Think of this as the lock on a door.
+
+When you try to clone, push, or pull from a repository using SSH, GitHub looks at your Public Key, encrypts a tiny message, and sends it to your computer. Because of the math behind the keys, only your Private Key can decrypt that message. If your computer successfully decrypts it and sends the right response back, GitHub knows it is really you and grants access.
+Why Use SSH Instead of HTTPS?
+
+When you clone a repository on GitHub, you are usually given two main options: HTTPS or SSH.
+
+    HTTPS: This is the default. However, GitHub no longer allows you to use your account password to authenticate via HTTPS. You must generate a Personal Access Token (PAT) and enter it, which can be tedious to manage or type out, even with a credential manager.
+
+    SSH: Once you generate your key pair and add the public key to GitHub, the connection happens automatically in the background. It is highly secure and incredibly convenient because it essentially creates a "trusted relationship" between your specific computer and GitHub.
